@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  height: 100vh;
+}
+.container-header  {
+  width: 90%;
+  background-color: #EAEAEA;
+  position:relative;
+  padding: 20px;
+  border-radius: 0.9rem;
+  margin-top: 1%;
+  text-align: left;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+}

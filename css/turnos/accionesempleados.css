@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+.fixed-top-2 {
+  margin-top: 56px;
+  z-index:2000;
+}
+.fixed-top-3 {
+    margin-top: 112px;
+}
+.fixed-top-4 {
+    margin-top: 56px;
+}
+
+
+body {
+     padding-top: 112px;
+  margin: 0;
+
+  background-color: #17a2b8;
+  height: 100vh;
+}
+
+
+
+.container{
+	margin:0;
+        max-width:1920px;
+	width:100%;}
+
+.widget-box {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    margin: 3px 0;
+    padding: 0;
+}
+
+.widget-header::before, .widget-header::after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.widget-header::after {
+    clear: right;
+}
+.widget-header::before, .widget-header::after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.widget-header {
+    background: linear-gradient(to bottom, #fff 0px, #eee 100%) repeat-x scroll 0 0 #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    box-sizing: content-box;
+    color: #669fc7;
+    min-height: 38px;
+    padding-left: 12px;
+    position: relative;
+}
+
+
+.widget-body {
+    background-color: #fff;
+}
+
+.widget-main {
+    padding: 12px;
+}
+.tableFixHeadW          { overflow-y: auto; height: 330px; }
+.tableFixHeadW thead th { position: sticky; top: 0; }
+.tableFixHeadComp          { overflow-y: auto; height: 520px; }
+.tableFixHeadComp thead th { position: sticky; top: 0; }
+.tableFixHead          { overflow-y: auto; height: 200px; }
+.tableFixHead thead th { position: sticky; top: 0; }
+
+/* Just common table stuff. Really. */
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+th     { background:#eee; }

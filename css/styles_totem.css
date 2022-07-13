@@ -1,0 +1,438 @@
+html, body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+[z-shadow='3'] { box-shadow: 0 6px  12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19) !important; }
+[z-shadow='4'] { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25) !important; }
+
+.text-align-center{ text-align: center; }
+.display-table{ display: table; }
+.display-table-cell{ display: table-cell; }
+.vertical-align-middle{ vertical-align: middle; }
+.vertical-align-top{ vertical-align: top; }
+.vertical-align-bottom{ vertical-align: bottom; }
+
+.btn-circle.btn-xl {
+    width: 90px;
+    height: 90px;
+    padding: 10px 16px;
+    /*border-radius: 35px;*/
+    text-align: center;
+    color: #FFFFFF;
+
+    background-color: #0B88CB;
+}
+
+.btn.btn-circle:hover {background-color: #0868C9}
+
+.btn.btn-circle:active {
+  background-color: #40638C;
+  box-shadow: 0 6px #666;
+  transform: translateY(5px);
+}
+
+
+.contenido .contenido-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+.contenido .anterior,
+.contenido .siguiente{
+	width: 15%;
+	height: 100%;
+	float: left;
+}
+
+.contenido .anterior .btn.btn-float,
+.contenido .siguiente .btn.btn-float{
+	position: initial;
+	margin: 0;
+
+	transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+}
+
+.contenido .anterior .btn.btn-float-lg,
+.contenido .siguiente .btn.btn-float-lg{
+	width: 80px;
+	height: 80px;
+	position: static;
+}
+
+.contenido .anterior .btn.btn-float i,
+.contenido .siguiente .btn.btn-float i{
+	color: #fff;
+	font-size: 2.5em;
+}
+
+.contenido .anterior .btn.btn-primary,
+.contenido .siguiente .btn.btn-primary{
+	background-color: #BF3265;
+}
+
+.contenido .anterior .btn.btn-primary[disabled="disabled"],
+.contenido .siguiente .btn.btn-primary[disabled="disabled"]{
+	background-color: #BDBDBD;
+}
+
+
+.contenido .pantallas{
+	width: 70%;
+	height: 100%;
+	float: left;
+}
+
+.pantallas .contenedor-pantallas{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.btn.btn-prestamos{
+	color: #FFFFFF;
+	background-color: #0B88CB;
+	/*font-size: 10px;*/
+  width: 50%;
+  /*height: 20%;*/
+	padding: 2% 2% 2% 2%;
+}
+
+.btn-cuota-OK{
+  height: 10rem;
+  width: 20rem;
+  background: #BADEFF;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #1255C9;
+  margin: 0.5rem;
+
+
+	/*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #1255C9;
+  background-color: #BADEFF;*/
+	/*padding: 50px 100px;*/
+}
+
+.btn-cuota-OK:hover{
+  height: 10rem;
+  background: #0B88CB;
+width: 20rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 0.5rem;
+	/*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #FFFFFF;
+  background-color: #0B88CB;*/
+	/*padding: 50px 100px;*/
+}
+
+.btn-check:active + .btn-cuota-OK, .btn-check:checked + .btn-cuota-OK, .btn-cuota-OK.active, .btn-cuota-OK.dropdown-toggle.show, .btn-cuota-OK:active{
+  height: 10rem;
+  background: #0327C6;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 0.5rem;
+  /*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #FFFFFF;
+  background-color: #0327C6;*/
+}
+
+.btn-cuota-VENCIDA{
+    height: 10rem;
+    background: #F8D7DA;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #842029;
+    margin: 0.5rem;
+	/*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #842029;
+  background-color: #F8D7DA;*/
+	/*padding: 50px 100px;*/
+}
+.btn-cuota-VENCIDA:hover{
+  height: 10rem;
+  background: #C90050;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 0.5rem;
+	/*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #FFFFFF;
+  background-color: #C90050;*/
+	/*padding: 50px 100px;*/
+}
+
+.btn-check:active + .btn-cuota-VENCIDA, .btn-check:checked + .btn-cuota-VENCIDA,
+.btn-cuota-VENCIDA.active, .btn-cuota-VENCIDA.dropdown-toggle.show, .btn-cuota-VENCIDA:active{
+  height: 10rem;
+  background: #7F0037;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin: 0.5rem;
+  /*font-size: 1.5rem;
+  width: 350px;
+  height: 200px;
+  color: #FFFFFF;
+  background-color: #7F0037;*/
+}
+
+
+
+.btn.btn-totem{
+	color: #FFFFFF;
+	background-color: #0B88CB;
+	font-size: 60px;
+	padding: 50px 100px;
+}
+.btn.btn-teclado{
+	font-size:2rem;
+  width:100%;
+  color: #FFFFFF;
+  background-color: #0B88CB;
+  border-color: #0B88CB;
+}
+.btn.btn-teclado:hover {background-color: #0868C9}
+
+.btn.btn-teclado:active {
+  background-color: #40638C;
+  box-shadow: 0 6px #666;
+  transform: translateY(5px);
+}
+
+
+.pantalla{
+	height: 100%;
+}
+
+[class*="pantalla-inner"]{
+	width: 100%;
+	height: 100%;
+}
+
+.centrar-pantalla{
+	width: 90%;
+	margin: 0 auto;
+}
+
+/*
+* === INPUT ===
+*/
+
+.input-group.inputTotem input[type="text"]{
+	height: 1.8em;
+	font-size: 3em;
+	padding-left: 0.2em;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border-bottom-width: 3px;
+}
+
+
+.input-group.inputTotem .input-textfield{
+	border-color: #0B88CB;
+}
+
+
+
+
+	/* Textfield */
+
+		/* Default */
+
+			.input-group .input-select,
+			.input-group .input-textfield {
+				z-index: 1;
+
+				/*position: relative;
+				float: left;
+
+				width: 100%;*/
+				height: 30px;
+
+				margin: 16px 0;
+
+				font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 15px;
+				color: #424242;
+
+				background-color: transparent;
+
+				outline: 0;
+				border: 0;
+				border-bottom: 1px solid #BDBDBD;
+
+				-webkit-transition: border .3s ease;
+				-moz-transition: border .3s ease;
+				-ms-transition: border .3s ease;
+				-o-transition: border .3s ease;
+				transition: border .3s ease;
+			}
+
+
+
+/*pantalla-0*/
+#pantalla-0 .contenedor-imagen{
+	width: 60%;
+	margin: 0 auto;
+}
+
+#pantalla-0 .titulo-mmit.bienvenido{
+	font-size: 4vw;
+	font-weight: 700;
+	padding-bottom: 10vh;
+}
+#pantalla-0 .titulo-mmit{
+	font-size: 2vw;
+	font-weight: 500;
+	padding-bottom: 10vh;
+}
+#pantalla-0 .mensaje-bienvenida{
+	font-size: 2vw;
+
+	padding-top: 10vh;
+}
+
+/*
+*	================================
+*	========== PANTALLA 1 ==========
+*	================================
+*/
+	/* Capitalize */
+		input[type="text"]#buscar-persona{
+			/*text-transform: capitalize;*/
+		}
+
+	#pantalla-1 .mensaje-primario{
+		font-size: 4vw;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	#pantalla-1 .mensaje-secundario{
+		font-size: 2vw;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	#pantalla-1 #cont-busqueda-persona{
+		padding-top: 10%;
+	}
+
+	#pantalla-1 #busqueda-persona{
+		animation-duration: .3s;
+  		animation-delay: 0s;
+  		-moz-animation-duration: .3s;
+  		-moz-animation-delay: 0s;
+  		-webkit-animation-duration: .3s;
+  		-webkit-animation-delay: 0s;
+	}
+
+	#pantalla-1 .lista-dinamica-personas{
+		width: 100%;
+	}
+
+	#pantalla-1 .lista-dinamica-personas{
+		width: 100%;
+	}
+
+	.lista-dinamica-personas .item-lista-inner{
+		width: 90%;
+		margin: 0 auto;
+
+		height: 5em;
+
+		border-bottom: 2px solid #935c70;
+
+		position: relative;
+
+		padding: 1em 0;
+
+		box-sizing: border-box;
+	}
+
+		.lista-dinamica-personas .item-lista-inner .item-lista-nombre{
+			width: 100%;
+
+			font-size: 2em;
+			font-weight: 400;
+			color: #935c70;
+
+			padding-right: 5em;
+			padding-left: 1em;
+
+			box-sizing: border-box;
+		}
+
+		.lista-dinamica-personas .item-lista-inner .item-lista-red{
+			color: #D32F2F;
+		}
+
+		.lista-dinamica-personas .item-lista-inner .item-lista-icono{
+			width: 5em;
+			height: 5em;
+
+			font-size: 1em;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.lista-dinamica-personas .item-lista-inner .item-lista-icono i{
+			font-size: 4em;
+			color: #935c70;
+		}
+
+
+    .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #00A79D;
+    /*opacity: 0.5;*/
+    }
+
+    .footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    }
