@@ -103,6 +103,10 @@ function getEnlace($url){
 		$this->load->view('turnos_inicio_view', $data);
 	}
 
+	public function incio_empleado(){
+		$this->load->view('turnos_inicio_empleado_view');
+	}
+
 	public function logout(){
 		$this->session->set_userdata(null);
 		$this->session->sess_destroy();

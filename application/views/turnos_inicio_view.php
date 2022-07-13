@@ -10,7 +10,7 @@
 <!--        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>-->
         <link href="<?=base_url()?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script type="text/javascript" src="<?=base_url()?>vendor/bootstrap/js/bootstrap.js"></script>
-        <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+        <link href="<?=base_url()?>vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
         <script src="<?=base_url()?>vendor/jquery/jquery.min.js"></script>
         <script src="<?=base_url()?>js/turnos/js/funcionesLogin.js"></script>
     </head>
@@ -33,7 +33,7 @@
                     <div class="form-outline mb-4">
                       <input type="number" name="cuit" id="cuit" class="form-control form-control-lg" required maxlength = "11"
                             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
-                      <label class="form-label text-info" for="typeEmailX-2">CUIL/CUIT</label>
+                      <label class="form-label text-info" for="cuit">CUIL/CUIT</label>
                     </div>
                     <label class="text-danger">
                          <?php
@@ -43,7 +43,7 @@
                          ?>
                      </label>
 
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Entrar</button>
+                    <button class="btn btn-primary btn-lg btn-block " type="submit"><i class="icon-power"> </i>Entrar</button>
                   </form>
                 </div>
               </div>

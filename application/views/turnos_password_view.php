@@ -10,9 +10,35 @@
 <!--        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>-->
         <link href="<?=base_url()?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script type="text/javascript" src="<?=base_url()?>vendor/bootstrap/js/bootstrap.js"></script>
-        <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+        <script type="text/javascript" src="<?=base_url()?>vendor/bootstrap/js/bootstrap.js"></script>
+        <link href="<?=base_url()?>vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
         <script src="<?=base_url()?>vendor/jquery/jquery.min.js"></script>
         <script src="<?=base_url()?>js/turnos/js/funcionesLogin.js"></script>
+        <script>
+          $(document).ready(function(){
+            $('#contrasenia').on('click', '.atras',function(){
+              window.location.replace("<?=base_url()?>turnos");
+            });
+
+            $('#password-form').submit(function(event){
+              $('#informe').html('<div class="loading text-center"><div class="spinner-border ml-auto text-danger" role="status" aria-hidden="true"></div></br><strong>Iniciando...</strong></div>');
+              $.ajax({
+                url: '<?=base_url()?>turnos/incio_empleado',
+                type: "POST",
+                data: $('#password-form').serialize(),
+                dataType: 'json'
+                success: function (data) {
+                    $('#informe').html("dfsfsf");
+                },
+                error: function(){
+                }
+              });
+              event.preventDefault();
+            });
+          });
+        </script>
+
+
     </head>
     <body>
       <section class="vh-100" style="background-color: #508bfc;">
@@ -20,7 +46,7 @@
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
               <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                <div class="card-body p-5 text-center">
+                <div id="contrasenia" class="card-body p-5 text-center">
 
                   <div class="text-center">
                     <img src="<?=base_url()?>images/turnos/logoalternativo2.png" class="rounded img-fluid" style="width: 200px;" alt="Responsive image">
@@ -28,20 +54,16 @@
 
                     <h4 class="mt-1 pb-1"> <?php echo $usuario['apellido'].", ".$usuario['nombre']; ?> </h4>
                   </div>
-                  <form id="password-form" class="form" method="post">
+                  <form id="password-form" class="form needs-validation" method="post">
                     <div class="form-outline mb-4">
-                      <input type="password" name="password" id="password" required/><br/>
+                      <input type="password" name="password" id="password" class="form-control form-control-lg" required  />
                       <label class="form-label text-info" for="password">Contraseña</label>
                     </div>
-                    <label class="text-danger">
-                         <?php
-                             if(isset($errorlogin)){
-                                 echo $errorlogin;
-                             }
-                         ?>
-                     </label>
+                    <label id="informe" >
 
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Entrar</button>
+                     </label><br/>
+                   <button id="atras" name="atras" class="btn btn-primary btn-lg btn-block atras" type="button" ><i class="icon-arrow-left-circle"> </i>Atras</button>
+                   <button class="btn btn-primary btn-lg btn-block" type="submit"><i class="icon-power"> </i>Entrar</button>
                   </form>
                 </div>
               </div>
