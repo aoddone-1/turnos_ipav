@@ -22,17 +22,7 @@
 
             $('#password-form').submit(function(event){
               $('#informe').html('<div class="loading text-center"><div class="spinner-border ml-auto text-danger" role="status" aria-hidden="true"></div></br><strong>Iniciando...</strong></div>');
-              $.ajax({
-                url: '<?=base_url()?>turnos/incio_empleado',
-                type: "POST",
-                data: $('#password-form').serialize(),
-                dataType: 'json'
-                success: function (data) {
-                    $('#informe').html("dfsfsf");
-                },
-                error: function(){
-                }
-              });
+              
               event.preventDefault();
             });
           });

@@ -17,16 +17,11 @@ class Turnos extends CI_Controller {
 				$this->load->model('empleado_model');
 				$this->load->model('provincia_model');
 				$this->load->model('localidad_model');
-				$this->load->model('enlaces_model');
-				$this->load->model('visitas_model');
 	}
 
 	public function index(){
 	    $data['base_url']        = $this->config->base_url();
 	    $data['gerencias']        = $this->getGerencias();
-      $enlace   = $this->getEnlace('turnos');
-      $data['enlace']= $enlace;
-			$this->visitas_model->setVisitas("Turnos On-Line",'icon-calendar',$data['base_url'].'turnos');
 	    redirect('turnos/login');
 	}
 
@@ -99,7 +94,6 @@ function getEnlace($url){
 			}
 		}
 		$data['base_url']        = $this->config->base_url();
-		$this->visitas_model->setVisitas('Turnos On-Line','icon-calendar',$data['base_url'].'turnos');
 		$this->load->view('turnos_inicio_view', $data);
 	}
 
